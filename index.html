@@ -21,10 +21,16 @@
 
 		  var submitButton = document.getElementById('submit');
 		  var textBox = document.getElementById('taskInput');
+
+			database.ref('users/').set({
+    			username: "Karishma"
+  			});	
+
+  			database.ref('tasks/').set({task: "Hello World"});	 
 		  
-		 function writeUserData(taskName) {
-		 	database.ref('tasks/' + userId).set({
-		    	task: taskName
+		 function writeUserData() {
+		 	database.ref('tasks/').set({
+		    	task: "Hello World!!!"
 		  	});
 		 }
 		
@@ -43,7 +49,7 @@
 			<h2>{{ title }}</h2>
 			<h3>{{ promo }}</h3>
 			<h4>Insert Task Here: <input type="text" ng-model="task.name" placeholder="Placeholder Task" id="taskInput" /></h4> 
-			<button id="submit">Enter</button>
+			<button id="submit" onclick="writeUserData()">Enter</button>
 		</div>
 	</body>
 </html>
