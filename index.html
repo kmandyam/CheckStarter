@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 	<head>
+		<!-- all the firebase scripts required for database -->
 		<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
@@ -18,9 +19,9 @@
 		  
 		  //test link to the firebase database
 			database.ref('users/').set({username: "Karishma"});	
-
   			database.ref('tasks/').set({task: "Hello World"});	 
 		  
+		 //method that uploads data in text box when Enter is pressed
 		 function writeUserData() {
 		 	var listName = document.getElementById('taskInput').value;
 		 	alert(listName);
@@ -28,6 +29,8 @@
 		 }
 		
 		</script>
+
+		<!-- My angular javascript files -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/controllers/MainController.js"></script>
@@ -41,6 +44,7 @@
 		<div class="main" ng-controller="MainController">
 			<h2>{{ title }}</h2>
 			<h3>{{ promo }}</h3>
+			<!--Input text field and submit button -->
 			<h4>Insert Task Here: <input type="text" ng-model="task.name" placeholder="Placeholder Task" id='taskInput' /></h4> 
 			<button id="submit" onclick="writeUserData()">Enter</button>
 		</div>
