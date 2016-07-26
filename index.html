@@ -15,20 +15,16 @@
 		  };
 		  firebase.initializeApp(config);
 		  var database = firebase.database();
-
-		  var submitButton = document.getElementById('#submit');
-		  var textBox = document.getElementById('#taskInput');
-
-			database.ref('users/').set({
-    			username: "Karishma"
-  			});	
+		  
+		  //test link to the firebase database
+			database.ref('users/').set({username: "Karishma"});	
 
   			database.ref('tasks/').set({task: "Hello World"});	 
 		  
-		 function writeUserData(e) {
-		 	database.ref('tasks/').set({
-		    	task: e
-		  	});
+		 function writeUserData() {
+		 	var listName = document.getElementById('taskInput').value;
+		 	alert(listName);
+		 	database.ref().child('tasks/').push({task: listName});
 		 }
 		
 		</script>
@@ -45,8 +41,8 @@
 		<div class="main" ng-controller="MainController">
 			<h2>{{ title }}</h2>
 			<h3>{{ promo }}</h3>
-			<h4>Insert Task Here: <input type="text" ng-model="task.name" placeholder="Placeholder Task" id="taskInput" /></h4> 
-			<button id="submit" onclick="writeUserData(task)">Enter</button>
+			<h4>Insert Task Here: <input type="text" ng-model="task.name" placeholder="Placeholder Task" id='taskInput' /></h4> 
+			<button id="submit" onclick="writeUserData()">Enter</button>
 		</div>
 	</body>
 </html>
