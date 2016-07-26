@@ -12,7 +12,7 @@ var database = firebase.database();
 database.ref('users/').set({username: "Karishma"});	
 database.ref('tasks/').set({task: "Hello World"});
 //test data for searching
-database.ref('checklists/').set({procedure: "Insert IV"});
+database.ref('checklists/').push({procedure: "Insert IV Line"});
 database.ref('checklists/').push({procedure: "Insert Line"});
 database.ref('checklists/').push({procedure: "Administer Injection"});	 
 
