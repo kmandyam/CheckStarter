@@ -12,7 +12,7 @@
 
 
 	<!-- My angular javascript files -->
-	<script src="firebase.js"></script>
+	<script src="js/firebase.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/controllers/MainController.js"></script>
 </head>
@@ -28,6 +28,7 @@
 		<!--Input text field and submit button -->
 		<h4>Insert Task Here: <input type="text" ng-model="task.name" placeholder="Placeholder Task" id='taskInput' /></h4> 
 		<button id="submit" onclick="writeUserData()">Enter</button>
+		<button id="newChecklist">Create New Checklist</button>
 	</div>
 </body>
 </html>

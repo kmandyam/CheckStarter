@@ -21,4 +21,5 @@ function writeUserData() {
 	var listName = document.getElementById('taskInput').value;
 	alert(listName);
 	database.ref().child('tasks/').push({task: listName});
+	document.getElementById('taskInput').value = "";
 }
