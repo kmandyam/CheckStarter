@@ -27,8 +27,17 @@
 		<h3>{{ promo }}</h3>
 		<!--Input text field and submit button -->
 		<h4>Insert Task Here: <input type="text" ng-model="task.name" placeholder="Placeholder Task" id='taskInput' /></h4> 
+	<div>
 		<button id="submit" onclick="writeUserData()">Enter</button>
+	</div>
+	<div>
 		<button id="newChecklist">Create New Checklist</button>
+	</div>
+	<div>
+		<h3>Create your new checklist here: <input type="text" placeholder="title" id="checklistTitle" /></h3>
+		<h3>Input tasks here: <input type="text" placeholder="tasks" id="insertCheckLists" /></h3>
+		<button id="secondCreate">Create Checklist<button>
+	</div>
 	</div>
 </body>
 </html>
