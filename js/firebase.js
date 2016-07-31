@@ -23,3 +23,10 @@ function writeUserData() {
 	database.ref().child('tasks/').push({task: listName});
 	document.getElementById('taskInput').value = "";
 }
+
+function writeChecklistData() {
+	var listName = document.getElementById('insertCheckLists');
+	alert(listName);
+	database.ref().child('newTasks/').push({checklist: listName});
+	document.getElementById('insertCheckLists').value = "";
+}
