@@ -30,3 +30,8 @@ function writeChecklistData() {
 	database.ref().child('newTasks/').push({checklist: listName});
 	document.getElementById('insertCheckLists').value = "";
 }
+
+function submitLocalTasks() {
+	
+}
+
