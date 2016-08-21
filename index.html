@@ -9,6 +9,7 @@
 	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+	<link rel="stylesheet" type="text/css" href="grayscale.css">
 
 
 	<!-- My angular javascript files -->
@@ -55,7 +56,7 @@
 		<li ng-repeat="task in localTasks">{{task}}</li> 
 		Add Another Task 
 		<input type="text" ng-model="newestTask" id="localTaskInput">
-		<button ng-click="updateLocalTasks()">Add</button>
+		<button ng-click="updateLocalTasks()" id="addID" type="submit">Add</button>
 		<button ng-click="submitLocalTasks()">Submit Checklist</button>
 	</div>
 </body>
