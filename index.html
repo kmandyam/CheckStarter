@@ -9,7 +9,6 @@
 	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-	<link rel="stylesheet" type="text/css" href="grayscale.css">
 
 
 	<!-- My angular javascript files -->
@@ -25,24 +24,34 @@
   			}
 		}
 	</script>
+
+	<script></script>
 </head>
 <body>
-	<div class="header">
+	<div class="mainPage">
 		<div class="container">
-			<h1>CheckStarter - By Karishma Mandyam</h1>
+				<h1>CheckStarter - By Karishma Mandyam</h1>
+				<h3>CheckStarter is a tool for anyone who seeks to simplify day to day tasks. This app was inspired by Atul Gawande and his research on how checklists significantly decrease mortality rates in hostpitals by holding doctors accountable for every step of each procedure. Gawande also mentions that checklists are a basic and useful tool for anyone who performs complex procedures on a daily basis, including pilots, technicians, and construction workers. For more information, check out 
+				<i>The Checklist Manifesto</i> by Atul Gawande</h3>
+		</div>
+		<div>
+			<button id="newChecklist">Create New Checklist</button>
 		</div>
 	</div>
+
+
+
+
 	<div class="main" ng-controller="MainController">
 		<h2>{{ title }}</h2>
 		<h3>{{ promo }}</h3>
 		<!--Input text field and submit button -->
 		<h4>Insert Task Here: <input type="text" ng-model="task.name" placeholder="Placeholder Task" id='taskInput' /></h4> 
+	</div>
 	<div>
 		<button id="submit" onclick="writeUserData()">Enter</button>
 	</div>
-	<div>
-		<button id="newChecklist">Create New Checklist</button>
-	</div>
+
 	<div>
 		<h3>Create your new checklist here: <input type="text" placeholder="title" id="checklistTitle" /></h3>
 		<h3>Input tasks here: <input type="text" placeholder="tasks" id="insertCheckLists" /></h3>
@@ -59,5 +68,9 @@
 		<button ng-click="updateLocalTasks()" id="addID" type="submit">Add</button>
 		<button ng-click="submitLocalTasks()">Submit Checklist</button>
 	</div>
+
 </body>
+	
+
+
 </html>
