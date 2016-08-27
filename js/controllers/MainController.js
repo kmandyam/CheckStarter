@@ -6,8 +6,11 @@ app.controller('MainController', ['$scope',
   		$scope.update = function(task) {
   			$scope.master = angular.copy(task);
   		}
-  		$scope.localTasks = ['be cool', 'have fun', 'yeah'];
+
+  		$scope.localTasks = ['be cool', 'have a good time', 'yeah'];
   		$scope.updateLocalTasks = function() {
   			$scope.localTasks.push($scope.newestTask);
+  			document.getElementById('localTaskInput').value = "";
   		}
+  		
 }]);

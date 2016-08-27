@@ -15,7 +15,6 @@
 	<script src="js/firebase.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/controllers/MainController.js"></script>
-
 </head>
 <body>
 	<div class="mainPage">
@@ -25,33 +24,19 @@
 				<i>The Checklist Manifesto</i> by Atul Gawande</h3>
 		</div>
 		<div>
-			<a href="pages/createChecklistPage.html"><button id="newChecklist">Create New Checklist</button></a>
+			<button id="newChecklist">Create New Checklist</button>
 		</div>
 	</div>
 
 
-
-
-	<div class="main" ng-controller="MainController">
-		<h2>{{ title }}</h2>
-		<h3>{{ promo }}</h3>
-		<!--Input text field and submit button -->
-		<h4>Insert Task Here: <input type="text" ng-model="task.name" placeholder="Placeholder Task" id='taskInput' /></h4> 
+	<div ng-controller="MainController">
+		<h1>Testing Upload</h1>
+		<li ng-repeat="task in localTasks">{{task}}</li> 
+		Add Another Task 
+		<input type="text" ng-model="newestTask" id="localTaskInput">
+		<button ng-click="updateLocalTasks()" id="addID" type="submit">Add</button>
+		<button ng-click="submitLocalTasks()">Submit Checklist</button>
 	</div>
-	<div>
-		<button id="submit" onclick="writeUserData()">Enter</button>
-	</div>
-
-	<div>
-		<h3>Create your new checklist here: <input type="text" placeholder="title" id="checklistTitle" /></h3>
-		<h3>Input tasks here: <input type="text" placeholder="tasks" id="insertCheckLists" /></h3>
-		<button id="secondCreate">Create Checklist</button>
-
-	</div>
-	</div>
-
-
-
 </body>
 	
 
