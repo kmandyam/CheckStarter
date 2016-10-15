@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<!-- angular javascript file -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+	<!-- all the firebase scripts required for database -->
+	<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+
+
+	<!-- My angular javascript files -->
+	<script src="js/firebase.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div ng-controller="MainController">
+		<h1>Testing Upload</h1>
+		<li ng-repeat="task in localTasks">{{ task }}</li>
+		<h4>Add Another Task</h4>
+		<input type="text" ng-model="newestTask" id="localTaskInput">
+		<button ng-click="updateLocalTasks()" id="addID" type="submit">Add</button>
+		<button ng-click="submitLocalTasks()">Submit Checklist</button>
+	</div>
+</body>
+
+
+
+</html>

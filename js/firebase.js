@@ -17,19 +17,19 @@ database.ref('checklists/').push({procedure: "Insert Line"});
 database.ref('checklists/').push({procedure: "Administer Injection"});
 
 //method that uploads data in text box when Enter is pressed
-function writeUserData() {
-	var listName = document.getElementById('taskInput').value;
-	alert(listName);
-	database.ref().child('tasks/').push({task: listName});
-	document.getElementById('taskInput').value = "";
-}
+// function writeUserData() {
+// 	var listName = document.getElementById('taskInput').value;
+// 	alert(listName);
+// 	database.ref().child('tasks/').push({task: listName});
+// 	document.getElementById('taskInput').value = "";
+// }
 
-function writeChecklistData() {
-	var listName = document.getElementById('insertCheckLists');
-	alert(listName);
-	database.ref().child('newTasks/').push({checklist: listName});
-	document.getElementById('insertCheckLists').value = "";
-}
+// function writeChecklistData() {
+// 	var listName = document.getElementById('insertCheckLists');
+// 	alert(listName);
+// 	database.ref().child('newTasks/').push({checklist: listName});
+// 	document.getElementById('insertCheckLists').value = "";
+// }
 
 function submitLocalTasks() {
 	var listName = document.getElementById('allDEMTasks');

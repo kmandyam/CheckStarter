@@ -11,11 +11,9 @@
 	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 	<script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
 
-
 	<!-- My angular javascript files -->
 	<script src="js/firebase.js"></script>
 	<script src="js/main.js"></script>
-	<!-- <script src="js/controllers/MainController.js"></script> -->
 
 </head>
 <body>
@@ -26,7 +24,7 @@
 				<i>The Checklist Manifesto</i> by Atul Gawande</h3>
 		</div>
 		<div>
-			<a href="pages/createChecklistPage.html"><button id="newChecklist">Create New Checklist</button></a>
+			<a href="createChecklistPage.html"><button id="newChecklist">Create New Checklist</button></a>
 		</div>
 	</div>
 
@@ -40,20 +38,14 @@
 		<button id="submit" onclick="writeUserData()">Enter</button>
 	</div>
 
-	<div>
-		<h3>Create your new checklist here: <input type="text" placeholder="title" id="checklistTitle" /></h3>
-		<h3>Input tasks here: <input type="text" placeholder="tasks" id="insertCheckLists" /></h3>
-		<button id="secondCreate">Create Checklist</button>
-	</div>
-
-	<div ng-controller="MainController">
+	<!-- <div ng-controller="MainController">
  		<h1>Testing Upload</h1>
  		<li ng-repeat="task in localTasks" id="allDEMTasks">{{task}}</li>
  			Add Another Task
  		<input type="text" ng-model="newestTask" id="localTaskInput">
  		<button ng-click="updateLocalTasks()">Add</button>
  		<button ng-click="submitLocalTasks()">Submit Checklist</button>
-  </div>
+  </div> -->
 
 
 

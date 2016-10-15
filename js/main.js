@@ -2,14 +2,7 @@ var app = angular.module('myApp', ['firebase']);
 
 app.controller('MainController', ['$scope', '$firebase',
 	function($scope, $firebase) {
-			// var config = {
-			// 	apiKey: "AIzaSyAldcJy3yN7wAF95Pc-qo5ScYltQRzxqaE",
-			// 	authDomain: "checkstarter-70322.firebaseapp.com",
-			// 	databaseURL: "https://checkstarter-70322.firebaseio.com",
-			// 	storageBucket: "checkstarter-70322.appspot.com",
-			// };
-			// firebase.initializeApp(config);
-			// var database = firebase.database();
+			var database = firebase.database();
 
   		$scope.title = 'Welcome to my angular checklisting app!';
   		$scope.promo = 'This is a place for doctors to input checklists and re-read them';
@@ -25,6 +18,7 @@ app.controller('MainController', ['$scope', '$firebase',
   		}
 
 			$scope.submitLocalTasks = function() {
-
+          database.ref().child('angularTest/').push({task: $scope.promo});
+          alert($scope.promo);
 			}
 }]);
