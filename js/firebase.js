@@ -9,12 +9,12 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 //test link to the firebase database
-database.ref('users/').set({username: "Karishma"});	
+database.ref('users/').set({username: "Karishma"});
 database.ref('tasks/').set({task: "Hello World"});
 //test data for searching
 database.ref('checklists/').push({procedure: "Insert IV Line"});
 database.ref('checklists/').push({procedure: "Insert Line"});
-database.ref('checklists/').push({procedure: "Administer Injection"});	 
+database.ref('checklists/').push({procedure: "Administer Injection"});
 
 //method that uploads data in text box when Enter is pressed
 function writeUserData() {
@@ -32,6 +32,6 @@ function writeChecklistData() {
 }
 
 function submitLocalTasks() {
-	
+	var listName = document.getElementById('allDEMTasks');
+	alert(listName);
 }
-

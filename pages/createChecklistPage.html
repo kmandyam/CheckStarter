@@ -31,12 +31,14 @@
 
 	<div ng-controller="MainController">
 		<h1>Testing Upload</h1>
-		<li ng-repeat="task in localTasks">{{task}}</li> 
-		Add Another Task 
+		<li ng-repeat="task in localTasks">{{ task }}</li> 
+		<h4>Add Another Task</h4> 
 		<input type="text" ng-model="newestTask" id="localTaskInput">
 		<button ng-click="updateLocalTasks()" id="addID" type="submit">Add</button>
 		<button ng-click="submitLocalTasks()">Submit Checklist</button>
 	</div>
+
+
 </body>
 	
 
